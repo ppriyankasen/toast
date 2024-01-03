@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { Step1Component } from './step-1/step1.component';
-import { NgxsModule } from '@ngxs/store';
-import { LoggingServiceModule } from 'ionic-logging-service';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
@@ -23,9 +21,7 @@ import { SharedModule } from './shared/shared.module';
       swipeBackEnabled: false
       // mode: 'ios'
     }),
-    AppRoutingModule,
-    NgxsModule.forRoot([]),
-    LoggingServiceModule
+    AppRoutingModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent]
